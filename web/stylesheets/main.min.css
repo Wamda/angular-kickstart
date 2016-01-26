@@ -1,0 +1,79 @@
+/**
+@import
+  'vendor/normalize',
+  'vendor/mixins/grid-framework',
+  'vendor/mixins/grid',
+  'vendor/grid',
+  'vendor/swipe';
+**/
+/**
+ * Basic styles for links
+ */
+a {
+  color: #E50050;
+  text-decoration: none; }
+  a:hover, a:active, a:focus {
+    color: #222;
+    text-decoration: underline; }
+
+.btn, a {
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out; }
+
+/**
+ * Basic styles for input fields
+ */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-focus-ring-color: none;
+  outline: none; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/opensans-regular.eot");
+  src: url("../assets/fonts/opensans-regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/opensans-regular.woff") format("woff"), url("../assets/fonts/opensans-regular.ttf") format("truetype"), url("../assets/fonts/opensans-regular.svg#opensans-regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: #222;
+  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap; }
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center; }
+
+/*# sourceMappingURL=main.min.css.map */
