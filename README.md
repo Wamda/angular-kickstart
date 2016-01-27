@@ -25,6 +25,13 @@ Example: Angular, it's component and 3rd party libs
 bower install
 ```
 
+###Install gems
+
+```
+gem install bundler // skip if already installed
+bundle install
+```
+
 ### Compile, run and watch
 ```
 gulp
