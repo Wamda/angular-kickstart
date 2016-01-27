@@ -35,7 +35,7 @@ gulp.task('serve', ['templateCache', 'buildstyles', 'buildVendorJS', 'buildapp']
 gulp.task('templateCache', function () {
     return gulp.src(config.sourcePaths.templates)
         .pipe(ngTemplates({
-            'module': 'alRobbanApp',
+            'module': 'angularKickstart',
             'header': 'angular.module("<%= module %>").run(["$templateCache", function($templateCache) {'
         }))
         .pipe(gulp.dest('tmp'));

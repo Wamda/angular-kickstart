@@ -24,10 +24,6 @@ angular.module('angularKickstart', [
         TABLET: 992
     })
 
-    .controller('MainController', ['$scope', function ($scope) {
-        console.log('testing');
-    }])
+    .controller('MainController', ['$scope', function ($scope) {}])
 
-    .run([function () {
-
-    }]);
+    .run([function () {}]);
