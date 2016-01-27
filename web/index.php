@@ -14,10 +14,7 @@
     </head>
     <body ng-controller="MainController">
     <h1>Angular App Kickstart</h1>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/samplepage">Sample page</a>
-        </nav>
+        <global-nav></global-nav>
         <div class="container">
             <ng-view class="view" autoscroll></ng-view>
         </div>
