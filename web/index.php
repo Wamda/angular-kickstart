@@ -1,17 +1,18 @@
+<?php $buildAssets = json_decode(file_get_contents('_build/rev-manifest.json'), true); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="angularKickstart">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="description" content="">
         <meta name="author" content="">
-        <meta name="format-detection" content="telephone=no">
         <link rel="icon" href="assets/images/favicon.ico">
         <title>Angular Kickstart</title>
+        <link href="<?php echo '/_build/'.$buildAssets['app.min.css']; ?>" rel="stylesheet" type="text/css">
     </head>
-    <body>
-        <h1>Angular App Kickstart</h1>
+    <body ng-controller="MainController">
+    <h1>Angular App Kickstart</h1>
         <nav>
             <a href="/">Home</a>
             <a href="/sample-page">Sample page</a>
@@ -25,5 +26,7 @@
                 <li>Includes useful Angular app Bower dependencies</li>
             </ul>
         </div>
+        <script src="<?php echo '/_build/'.$buildAssets['vendor.min.js']; ?>"></script>
+        <script src="<?php echo '/_build/'.$buildAssets['app.min.js']; ?>"></script>
     </body>
 </html>
