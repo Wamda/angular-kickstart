@@ -3,7 +3,25 @@ module.exports = {
         host: 'localhost',
         port: '9000'
     },
+    watchPaths: {
+        scss: [
+            'web/**/*.scss',
+            '!web/bower_components/**/*.scss',
+            '!web/_build/**/*.scss'
+        ],
 
+        js: [
+            'web/**/*.js',
+            '!web/bower_components/**/*.js',
+            '!web/_build/**/*.js'
+        ],
+
+        html: [
+            'web/**/*.html',
+            '!web/bower_components/**/*.html',
+            '!web/_build/**/*.html'
+        ]
+    },
     distPaths: {
         styles: 'tmp/css',
         appBuild: 'web/_build'        

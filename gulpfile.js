@@ -42,9 +42,10 @@ gulp.task('templateCache', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('web/assets/scss/*.scss', ['buildstyles']);
+    gulp.watch(config.watchPaths.scss, ['buildstyles']);
+    gulp.watch(config.watchPaths.js, ['buildapp']);
+    gulp.watch(config.watchPaths.html, ['templateCache', 'buildapp']);
     gulp.watch(config.sourcePaths.vendorJS, ['buildVendorJS']);
-    gulp.watch(config.sourcePaths.appJS, ['buildapp']);
 });
 
 gulp.task('openbrowser', function () {
